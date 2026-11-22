@@ -1,0 +1,602 @@
+{
+ "meta": {
+  "rows": 58345,
+  "compounds": 12340,
+  "datasets": 279,
+  "n_mol": 213,
+  "n_sys": 37,
+  "drug_rows": 2478,
+  "drug_compounds": 259
+ },
+ "res": {
+  "compound|Ridge": {
+   "MAE": 8.935780462824724,
+   "RMSE": 12.35617168607064,
+   "R2": 0.7996724970805935,
+   "MedAE": 6.813586563248123,
+   "w5": 0.3864598508869654
+  },
+  "compound|RF": {
+   "MAE": 7.477089684587751,
+   "RMSE": 10.688619862009014,
+   "R2": 0.8500950503239801,
+   "MedAE": 5.348253940798877,
+   "w5": 0.4751906761504842
+  },
+  "compound|LightGBM": {
+   "MAE": 6.078584311076763,
+   "RMSE": 9.257233532452194,
+   "R2": 0.8875562944938808,
+   "MedAE": 4.0072815876831065,
+   "w5": 0.5844202588053817
+  },
+  "compound|ANN": {
+   "MAE": 6.484915576675767,
+   "RMSE": 10.053283148610246,
+   "R2": 0.8673862553616674,
+   "MedAE": 4.192493861438784,
+   "w5": 0.561110635015854
+  },
+  "dataset|Ridge": {
+   "MAE": 12.632982488629205,
+   "RMSE": 20.11985321950036,
+   "R2": 0.4688437139480264,
+   "MedAE": 8.067423799333156,
+   "w5": 0.3347501928185791
+  },
+  "dataset|RF": {
+   "MAE": 6.189726247544461,
+   "RMSE": 10.253914624371404,
+   "R2": 0.862040343730578,
+   "MedAE": 2.981037140528045,
+   "w5": 0.6330276801782501
+  },
+  "dataset|LightGBM": {
+   "MAE": 5.289206668582726,
+   "RMSE": 9.413783472238404,
+   "R2": 0.8837210452869957,
+   "MedAE": 2.234583164413276,
+   "w5": 0.6978661410575028
+  },
+  "dataset|ANN": {
+   "MAE": 9.229778028795923,
+   "RMSE": 17.290371844118482,
+   "R2": 0.607733359622997,
+   "MedAE": 3.2315471481390285,
+   "w5": 0.6069586082783444
+  },
+  "compound|Dataset mean": {
+   "MAE": 18.963270733070782,
+   "RMSE": 23.407479931570524,
+   "R2": 0.2810775778641058,
+   "MedAE": 16.810813927157547,
+   "w5": 0.1605278944211157
+  },
+  "compound|LightGBM Molecular only": {
+   "MAE": 10.502159473949346,
+   "RMSE": 13.998399953941778,
+   "R2": 0.7428837620959481,
+   "MedAE": 8.075219688886307,
+   "w5": 0.3258719684634502
+  },
+  "compound|LightGBM System only": {
+   "MAE": 19.24038166921177,
+   "RMSE": 23.65846094058473,
+   "R2": 0.2655779841165397,
+   "MedAE": 17.413475634153677,
+   "w5": 0.1565686862627474
+  },
+  "drug-external|Ridge": {
+   "MAE": 10.340616580621722,
+   "RMSE": 13.437152606456372,
+   "R2": 0.6571488195446642,
+   "MedAE": 8.103613772272368,
+   "w5": 0.3071025020177562
+  },
+  "drug-external|RF": {
+   "MAE": 8.6950737223545,
+   "RMSE": 11.54326060547759,
+   "R2": 0.7469839034627628,
+   "MedAE": 6.91467000670624,
+   "w5": 0.3979015334947538
+  },
+  "drug-external|LightGBM": {
+   "MAE": 6.928940057089289,
+   "RMSE": 9.55393948413762,
+   "R2": 0.8266770300289319,
+   "MedAE": 5.204236494992731,
+   "w5": 0.4842615012106537
+  },
+  "drug-external|ANN": {
+   "MAE": 7.295314839048414,
+   "RMSE": 10.528321418519358,
+   "R2": 0.789520685738509,
+   "MedAE": 4.96852731253459,
+   "w5": 0.5024213075060533
+  }
+ },
+ "lc": [
+  {
+   "n": 500,
+   "ANN": 10.57,
+   "LightGBM": 9.23
+  },
+  {
+   "n": 1000,
+   "ANN": 9.7,
+   "LightGBM": 8.37
+  },
+  {
+   "n": 2500,
+   "ANN": 8.35,
+   "LightGBM": 7.62
+  },
+  {
+   "n": 5000,
+   "ANN": 8.07,
+   "LightGBM": 7.07
+  },
+  {
+   "n": 10000,
+   "ANN": 7.52,
+   "LightGBM": 6.53
+  },
+  {
+   "n": 20000,
+   "ANN": 7.18,
+   "LightGBM": 6.18
+  },
+  {
+   "n": 46676,
+   "ANN": 6.66,
+   "LightGBM": 5.89
+  }
+ ],
+ "interp": {
+  "molshare": 0.7453871682783483,
+  "top": [
+   "MolLogP",
+   "acn_frac",
+   "PEOE_VSA6",
+   "b",
+   "NHOHCount",
+   "MolMR",
+   "slope",
+   "VSA_EState8",
+   "Chi0v",
+   "Chi0n",
+   "SlogP_VSA5",
+   "PEOE_VSA1",
+   "T",
+   "VSA_EState4",
+   "MaxEStateIndex"
+  ],
+  "rho": 0.14046281624226198,
+  "dec1": 3.437855169454007,
+  "dec10": 5.359749341720278
+ },
+ "case": {
+  "n": 201,
+  "systems": 165,
+  "mae_rt": 1.073137494692791,
+  "med_rt": 0.6140955343172418,
+  "mae_phi": 6.391175397944661,
+  "med_rel": 5.746182147086815,
+  "within1": 0.6616915422885572
+ },
+ "case_summary": [
+  {
+   "drug": "Amlodipine",
+   "panel": "A",
+   "ad_dist": 4.094,
+   "n": 2.0,
+   "datasets": 2.0,
+   "mae_phi": 3.87,
+   "mae_rt": 0.54,
+   "med_rel": 4.715
+  },
+  {
+   "drug": "Bisoprolol",
+   "panel": "A",
+   "ad_dist": 2.176,
+   "n": 12.0,
+   "datasets": 12.0,
+   "mae_phi": 5.144,
+   "mae_rt": 1.545,
+   "med_rel": 6.378
+  },
+  {
+   "drug": "Clarithromycin",
+   "panel": "A",
+   "ad_dist": 2.56,
+   "n": 11.0,
+   "datasets": 11.0,
+   "mae_phi": 2.172,
+   "mae_rt": 0.437,
+   "med_rel": 2.261
+  },
+  {
+   "drug": "Clopidogrel",
+   "panel": "A",
+   "ad_dist": 3.104,
+   "n": 1.0,
+   "datasets": 1.0,
+   "mae_phi": 15.756,
+   "mae_rt": 3.163,
+   "med_rel": 22.427
+  },
+  {
+   "drug": "Folic acid",
+   "panel": "A",
+   "ad_dist": 3.503,
+   "n": 118.0,
+   "datasets": 118.0,
+   "mae_phi": 6.977,
+   "mae_rt": 0.931,
+   "med_rel": 7.093
+  },
+  {
+   "drug": "Glimepiride",
+   "panel": "A",
+   "ad_dist": 6.046,
+   "n": 21.0,
+   "datasets": 20.0,
+   "mae_phi": 6.075,
+   "mae_rt": 1.262,
+   "med_rel": 6.477
+  },
+  {
+   "drug": "Isosorbide mononitrate",
+   "panel": "A",
+   "ad_dist": 3.908,
+   "n": "",
+   "datasets": "",
+   "mae_phi": "",
+   "mae_rt": "",
+   "med_rel": ""
+  },
+  {
+   "drug": "Paracetamol",
+   "panel": "A",
+   "ad_dist": 1.36,
+   "n": 30.0,
+   "datasets": 29.0,
+   "mae_phi": 6.511,
+   "mae_rt": 1.269,
+   "med_rel": 5.603
+  },
+  {
+   "drug": "Alprazolam",
+   "panel": "B",
+   "ad_dist": 2.001,
+   "n": 1.0,
+   "datasets": 1.0,
+   "mae_phi": 3.82,
+   "mae_rt": 0.767,
+   "med_rel": 5.436
+  },
+  {
+   "drug": "Bromazepam",
+   "panel": "B",
+   "ad_dist": 2.55,
+   "n": 1.0,
+   "datasets": 1.0,
+   "mae_phi": 0.268,
+   "mae_rt": 0.054,
+   "med_rel": 0.381
+  },
+  {
+   "drug": "Methylphenidate",
+   "panel": "B",
+   "ad_dist": 2.407,
+   "n": 4.0,
+   "datasets": 4.0,
+   "mae_phi": 6.311,
+   "mae_rt": 3.211,
+   "med_rel": 15.386
+  }
+ ],
+ "scout": {
+  "A": [
+   {
+    "panel": "A",
+    "dataset": "0004",
+    "column": "Thermo Scientific Hypersil GOLD",
+    "acn_frac": 1.0,
+    "formic": 0.2,
+    "nh4ac": 0.0,
+    "nh4form": 0.0,
+    "flow": 0.5,
+    "L": 150.0,
+    "ID": 2.1,
+    "T": null,
+    "run": 13.662,
+    "min_gap": 0.527,
+    "crit": "Clopidogrel / Glimepiride",
+    "span": 6.828,
+    "min_dphi": 4.79,
+    "url": "https://doi.org/10.1021/ac300829f",
+    "score": 0.039
+   },
+   {
+    "panel": "A",
+    "dataset": "0433",
+    "column": "Merck Supelco Ascentis Express C18",
+    "acn_frac": 0.0,
+    "formic": 0.0,
+    "nh4ac": 0.0,
+    "nh4form": 5.0,
+    "flow": 0.3,
+    "L": 100.0,
+    "ID": 2.1,
+    "T": 40.0,
+    "run": 20.735,
+    "min_gap": 0.755,
+    "crit": "Clopidogrel / Clarithromycin",
+    "span": 12.873,
+    "min_dphi": 3.577,
+    "url": "10.1016/j.jchromb.2017.07.016",
+    "score": 0.036
+   },
+   {
+    "panel": "A",
+    "dataset": "0350",
+    "column": "Waters ACQUITY UPLC HSS C18",
+    "acn_frac": 0.0,
+    "formic": 0.2,
+    "nh4ac": 0.0,
+    "nh4form": 0.0,
+    "flow": 0.4,
+    "L": 100.0,
+    "ID": 2.1,
+    "T": 30.0,
+    "run": 6.961,
+    "min_gap": 0.206,
+    "crit": "Amlodipine / Clarithromycin",
+    "span": 4.172,
+    "min_dphi": 3.676,
+    "url": null,
+    "score": 0.03
+   },
+   {
+    "panel": "A",
+    "dataset": "0002",
+    "column": "Waters ACQUITY UPLC HSS T3",
+    "acn_frac": 0.0,
+    "formic": 0.2,
+    "nh4ac": 0.0,
+    "nh4form": 0.0,
+    "flow": 0.3,
+    "L": 100.0,
+    "ID": 2.1,
+    "T": 30.0,
+    "run": 56.735,
+    "min_gap": 1.666,
+    "crit": "Clarithromycin / Amlodipine",
+    "span": 37.258,
+    "min_dphi": 3.332,
+    "url": "https://doi.org/10.1007/s11306-011-0298-z",
+    "score": 0.029
+   }
+  ],
+  "B": [
+   {
+    "panel": "B",
+    "dataset": "0186",
+    "column": "Agilent ZORBAX Extend-C18",
+    "acn_frac": 1.0,
+    "formic": 0.2,
+    "nh4ac": 0.0,
+    "nh4form": 0.0,
+    "flow": 0.1,
+    "L": 50.0,
+    "ID": 2.1,
+    "T": null,
+    "run": 21.102,
+    "min_gap": 2.163,
+    "crit": "Bromazepam / Methylphenidate",
+    "span": 4.48,
+    "min_dphi": 5.048,
+    "url": "https://doi.org/10.1038/s41467-019-13680-7",
+    "score": 0.103
+   },
+   {
+    "panel": "B",
+    "dataset": "0350",
+    "column": "Waters ACQUITY UPLC HSS C18",
+    "acn_frac": 0.0,
+    "formic": 0.2,
+    "nh4ac": 0.0,
+    "nh4form": 0.0,
+    "flow": 0.4,
+    "L": 100.0,
+    "ID": 2.1,
+    "T": 30.0,
+    "run": 6.961,
+    "min_gap": 0.533,
+    "crit": "Methylphenidate / Bromazepam",
+    "span": 1.081,
+    "min_dphi": 9.516,
+    "url": null,
+    "score": 0.077
+   },
+   {
+    "panel": "B",
+    "dataset": "0019",
+    "column": "Waters XBridge C18",
+    "acn_frac": 0.0,
+    "formic": 0.2,
+    "nh4ac": 0.0,
+    "nh4form": 0.0,
+    "flow": 0.2,
+    "L": 50.0,
+    "ID": 2.1,
+    "T": 30.0,
+    "run": 17.551,
+    "min_gap": 1.269,
+    "crit": "Methylphenidate / Bromazepam",
+    "span": 3.338,
+    "min_dphi": 4.391,
+    "url": "https://doi.org/10.1021/es4044374,  10.1002/jms.3131",
+    "score": 0.072
+   },
+   {
+    "panel": "B",
+    "dataset": "0433",
+    "column": "Merck Supelco Ascentis Express C18",
+    "acn_frac": 0.0,
+    "formic": 0.0,
+    "nh4ac": 0.0,
+    "nh4form": 5.0,
+    "flow": 0.3,
+    "L": 100.0,
+    "ID": 2.1,
+    "T": 40.0,
+    "run": 20.735,
+    "min_gap": 1.339,
+    "crit": "Bromazepam / Alprazolam",
+    "span": 3.675,
+    "min_dphi": 6.345,
+    "url": "10.1016/j.jchromb.2017.07.016",
+    "score": 0.065
+   }
+  ]
+ },
+ "scout_n": 20,
+ "scout_frac_ok": {
+  "A": 0.2,
+  "B": 0.4
+ },
+ "drug_cls": [
+  {
+   "cls": "analgesic",
+   "n": 275,
+   "lgb": 7.06,
+   "ann": 6.61
+  },
+  {
+   "cls": "antibiotic",
+   "n": 265,
+   "lgb": 5.84,
+   "ann": 7.6
+  },
+  {
+   "cls": "antidiabetic",
+   "n": 103,
+   "lgb": 7.97,
+   "ann": 7.91
+  },
+  {
+   "cls": "cardiovascular",
+   "n": 573,
+   "lgb": 7.87,
+   "ann": 8.7
+  },
+  {
+   "cls": "cns",
+   "n": 545,
+   "lgb": 6.59,
+   "ann": 7.3
+  },
+  {
+   "cls": "other",
+   "n": 717,
+   "lgb": 6.64,
+   "ann": 6.24
+  }
+ ],
+ "kb1": {
+  "n_struct": 135,
+  "n_manual": 55,
+  "logP": {
+   "med_phob": 2.5166,
+   "med_phil": 1.58296,
+   "p": 0.0030806960441937853
+  },
+  "TPSA": {
+   "med_phob": 46.53,
+   "med_phil": 40.46,
+   "p": 0.19468400817488463
+  },
+  "MW": {
+   "med_phob": 225.25500000000002,
+   "med_phil": 170.72749999999996,
+   "p": 0.015129257019143708
+  },
+  "class_auc_lr": 0.5510316066725197,
+  "class_auc_rf": 0.710601404741001,
+  "class_bacc_rf": 0.6590210711150132,
+  "family_auc_rf": 0.81374321880651,
+  "n_primesep": 79
+ },
+ "kb": {
+  "family_chi2": 68.63321839062077,
+  "family_p": 1.9721850677113708e-13,
+  "family_dof": 5,
+  "family_V": 0.6469120760112235,
+  "additive_chi2": 38.89466484693369,
+  "additive_p": 2.04701192340431e-06,
+  "additive_dof": 7,
+  "additive_V": 0.4869934193909436,
+  "grad_table": [
+   [
+    52,
+    53
+   ],
+   [
+    29,
+    30
+   ]
+  ],
+  "fisher_OR": 1.014964216005205,
+  "fisher_p": 1.0,
+  "wl_mw_U": 3743.0,
+  "wl_mw_p": 0.036237153407141315,
+  "wl_median": {
+   "Hydrophobic": 254.0,
+   "Hydrophilic": 250.0
+  },
+  "wl_iqr": {
+   "Hydrophobic": [
+    250.0,
+    270.0
+   ],
+   "Hydrophilic": [
+    210.0,
+    270.0
+   ]
+  },
+  "n_class": {
+   "Hydrophobic": 83,
+   "Hydrophilic": 81
+  },
+  "universal": 7,
+  "flow_counts": {
+   "1.0": 114,
+   "0.4": 22,
+   "0.5": 22,
+   "1.2": 3,
+   "0.6": 2,
+   "1.5": 1
+  }
+ },
+ "sys": {
+  "n": 279,
+  "hsm": 216,
+  "tanaka": 211,
+  "acn": 136,
+  "L1": 246,
+  "L11": 19,
+  "formic": 239,
+  "flow_med": 0.35,
+  "t0_med": 0.735,
+  "cols": 43,
+  "studies": 52
+ },
+ "per_sys": {
+  "median": 2.5776314628941397,
+  "q1": 1.7949068548294322,
+  "q3": 6.960048315739164,
+  "lt5": 0.6810035842293907
+ }
+}

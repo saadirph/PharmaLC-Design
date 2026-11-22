@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pharmalc-design"
+version = "1.0.0"
+description = "Anchor-Free Machine Learning for Transferable Retention Prediction and Experimental Optimization of Pharmaceutical RP-LC"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+authors = [
+    {name = "Shanza Nageen"},
+    {name = "Saad Salman", email = "saad.salman@cecos.edu.pk"}
+]
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.1",
+    "scipy>=1.11",
+    "scikit-learn>=1.4",
+    "rdkit>=2023.9",
+    "lightgbm>=4.0",
+    "matplotlib>=3.8",
+]
+
+[project.optional-dependencies]
+app = ["streamlit>=1.35"]
+dev = ["pytest>=8.0", "shap>=0.44"]
+
+[project.scripts]
+pharmalc = "pharmalc.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pharmalc*"]
