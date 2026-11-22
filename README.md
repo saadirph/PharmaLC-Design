@@ -2,12 +2,6 @@
 
 **Anchor-Free Machine Learning for Transferable Retention Prediction and Experimental Optimization of Pharmaceutical Reversed-Phase Liquid Chromatography**
 
-Shanza Nageen, Saad Salman*  
-Faculty of Pharmacy, CECOS University of IT & Emerging Sciences, Peshawar, Pakistan  
-*Correspondence: `saad.salman@cecos.edu.pk`
-
----
-
 ## Overview
 
 `PharmaLC-Design` implements the four-module anchor-free RP-LC method-development workflow described in the manuscript:
